@@ -23,7 +23,7 @@ const AppWrapper = styled.div`
     --activeShadow: var(--redShadow);
   }
 
-  box-shadow:  var(--activeShadow) 0px 20px 4vmin, var(--activeCast) 0px -20px 4vmin;
+  box-shadow:  var(--activeShadow) 0 3vmin 4vmin, var(--activeCast) 0 -3vmin 4vmin;
 
   color: whitesmoke;
   width: var(--timerWidth);
