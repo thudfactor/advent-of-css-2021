@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+@font-face {
+  font-family: 'bebasneue';
+  src: url('/fonts/bebasneue-book-webfont.woff') format('woff'),
+       url('/fonts/bebasneue-book-webfont.woff2') format('woff2');
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -5,8 +13,37 @@ html, body {
 }
 
 body {
+  --redColor: hsl(0 87% 30%);
+  --redCast: hsl(0 87% 100% / .2);
+  --redShadow: hsl(0 20% 10% / .9);
+  --greenColor: hsl(151 90% 34%);
+  --greenCast: hsl(151 90% 100% / .2);
+  --greenShadow: hsl(151 20% 10% / .9);
+
   background-color: hsl(241 6% 18% / 1);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.text-gradient {
+  --gradientStart: hsl(0 0% 100%);
+  --gradientEnd: hsl(223 17% 86%);
+
+  color: var(--gradientStart);
+  background: linear-gradient(180deg, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* from https://css-tricks.com/inclusively-hidden/ */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
 }

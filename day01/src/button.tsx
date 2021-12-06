@@ -3,10 +3,11 @@ import { ReactNode } from "react"
 type Button = {
   click:Function;
   children: ReactNode;
+  className?: string;
 }
 
-export default function Button({click, children}:Button) {
+export default function Button({click, className, children}:Button) {
   return (
-    <button onClick={() => { click() }}>{children}</button>
+    <button className={className} onClick={() => { click() }}>{children}</button>
   )
 };
