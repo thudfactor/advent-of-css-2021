@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TimerWrapper = styled.div`
   --borderColor: transparent;
   font-family: 'bebasneue', 'serif';
-  font-size: 18vmin;
+  font-size: 32vmin;
 
 
   &.editing {
@@ -13,13 +13,10 @@ export const TimerWrapper = styled.div`
   input {
     font-family: inherit;
     font-size: inherit;
+    color: yellow;
     background-color: transparent;
     border-width: 0;
-    width: 3ch;
-
-    &::-webkit-inner-spin-button {
-      
-    }
+    width: 2.75ch;
   }
 
   span, input {

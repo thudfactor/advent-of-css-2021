@@ -9,7 +9,6 @@ export const TimerContents = styled.div`
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 5vmin;
-    gap: 5vmin;
+    gap: 2vmin;
   }
 `;

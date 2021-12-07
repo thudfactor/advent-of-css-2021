@@ -13,7 +13,8 @@ export const Controls = styled.div`
     }
 
     &.startButton {
-      font: 1rem 'Montserrat', cursive;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(.75rem, 1.5vmin, 2rem);
       display: inline-block;
       letter-spacing: .6em;
       text-indent: .6em;
@@ -28,6 +29,10 @@ export const Controls = styled.div`
       color: hsl(0 0% 35%);
       text-indent: 0;
       background-color: transparent;
+
+      svg {
+        width: clamp(1rem, 2vmin, 4rem);
+      }
 
       &:hover {
         color: var(--greenColor);
