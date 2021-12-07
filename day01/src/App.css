@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:wght@700&display=swap');
 
 @font-face {
   font-family: 'bebasneue';
@@ -22,19 +22,29 @@ body {
 
   background-color: hsl(241 6% 18% / 1);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-.text-gradient {
-  --gradientStart: hsl(0 0% 100%);
-  --gradientEnd: hsl(223 17% 86%);
+header, footer {
+  background-color: black;
+  font-family: 'fira code', monospace;
+  font-size: .75rem;
+  color: white;
+  width: 100%;
+  padding: .3rem .3rem .5rem;
+  text-align: center;
+}
 
-  color: var(--gradientStart);
-  background: linear-gradient(180deg, var(--gradientStart) 0%, var(--gradientEnd) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+header a:link, header a:visited,
+footer a:link, footer a:visited {
+  color: #cbffb4;
+}
+
+header a:active, header a:hover,
+footer a:active, footer a:hover {
+  color: #efffb4;
 }
 
 /* from https://css-tricks.com/inclusively-hidden/ */

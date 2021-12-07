@@ -7,10 +7,15 @@ import { Gear } from './gear';
 import { Check } from './check';
 import { Timer } from './timer';
 import Button from './button';
+import { CSSProperties } from 'styled-components';
 
 const MaxTimer = 90 * 60 * 1000;
 const MinTimer = 1 * 1000;
 const DefaultTimer = 15 * 60 * 1000;
+
+interface CSSCustomProperties extends CSSProperties {
+  '--terminate': string;
+}
 
 function App() {
   const [currentTimer, setCurrentTimer] = useState(DefaultTimer);
@@ -79,7 +84,7 @@ function App() {
   }
 
   return (
-    <AppWrapper style={{'--terminate': `${((currentTimer - count) / currentTimer) * 100}%`}} className={`${running ? 'running' : 'stopped'}`}>
+    <AppWrapper style={{'--terminate': `${((currentTimer - count) / currentTimer) * 100}%`} as CSSCustomProperties} className={`${running ? 'running' : 'stopped'}`}>
       <TimerContents>
         <Timer updateTimerValue={updateTimerValue} current={count} editing={editing} />
         <Controls>

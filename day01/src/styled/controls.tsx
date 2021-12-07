@@ -5,21 +5,29 @@ export const Controls = styled.div`
   flex-direction: column;
 
   button {
-    font: 1rem 'Montserrat', cursive;
-    letter-spacing: .6em;
-    line-height: 1.218;
-    text-transform: uppercase;
     border-width: 0;
-    background-color: transparent;
-    color: white;
 
     &:hover {
       color: var(--greenColor);
       -webkit-text-fill-color: var(--greenColor);
     }
 
+    &.startButton {
+      font: 1rem 'Montserrat', cursive;
+      display: inline-block;
+      letter-spacing: .6em;
+      text-indent: .6em;
+      line-height: 1.218;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      background-color: transparent;
+    }
+
     &.settingsButton {
       color: hsl(0 0% 35%);
+      text-indent: 0;
+      background-color: transparent;
 
       &:hover {
         color: var(--greenColor);
